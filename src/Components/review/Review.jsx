@@ -1,8 +1,9 @@
 import React from 'react'
 import question from '../../context/question'
 
-const Review = ({ score, answer,setReset }) => {
-  const data = question
+const Review = ({data, score, answer,setReset }) => {
+  
+  // const data = question
 
 
   return (
@@ -25,8 +26,8 @@ const Review = ({ score, answer,setReset }) => {
                     key={index}
                     onClick={() => handleOption(index)}
                     className={`
-                      ${item.answer==option?"bg-green-200":""}  
-                      ${answer[index]==option&&answer[index]!=item.answer?"bg-red-200":""} 
+                      ${item.correctAnswer==option?"bg-green-200":""}  
+                      ${answer[index]==option&&answer[index]!=item.correctAnswer?"bg-red-200":""} 
                       transition-all duration-300 rounded border p-4 `}
                   >
                     <button>{option}</button>
