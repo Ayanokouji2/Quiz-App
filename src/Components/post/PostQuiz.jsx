@@ -49,7 +49,7 @@ const PostQuiz = () => {
   const handleSubmit = async () => {
     try {
       const res = await axios.post('api/v1/quiz/create-quiz', data);
-      console.log(res.data);
+      console.log(res.status);
     } catch (error) {
       console.error(error);
     }
