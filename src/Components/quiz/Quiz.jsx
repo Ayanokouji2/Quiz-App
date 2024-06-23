@@ -50,8 +50,9 @@ const Quiz = () => {
 			setProgress(false)
 		else 
 			setProgress(true)
+		
 	},[ pointer])
-	
+
 
 	useEffect(() => {
 
